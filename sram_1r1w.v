@@ -16,7 +16,7 @@
 
 
 module sram_1r1w
-	#(parameter DATA_WIDTH = 32,
+	#(parameter DATA_WIDTH = 46,
 	parameter SIZE = 1024,
 	parameter ADDR_WIDTH = $clog2(SIZE))
 
@@ -32,8 +32,8 @@ module sram_1r1w
 
 	initial
 	begin
-		for (i = 0; i < SIZE; i = i + 1)
-			data[i] = 0;
+		//for (i = 0; i < SIZE; i = i + 1)
+		//	data[i] = 0;
 			
 		rd_data = 0;
 		$readmemh("microcode.hex", data);
